@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+	<title>My Online Portfolio: Niel AC's Achievements</title>
+	<style>
+		body {
+			background-image: url(https://img.freepik.com/premium-vector/flat-abstract-doodle-background_23-2149336497.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-attachment: fixed;
+			flex-wrap: wrap;
+		}
+		.header {
+			border: solid 3px black;
+			padding: 10px;
+			margin: 8px;
+			font-family: monospace;
+			background-color: lightpink;
+		}
+		#Logo {
+			width: 44px;
+			height: 45px;
+		}
+		h1 {
+			height: 40px;
+		}
+		.container {
+			border: solid 3px black;
+			padding: 25px;
+			margin: 450px;
+			font-family: monospace;
+			background-color: lightcoral;
+			width: 500px;
+
+		}
+		#Logo2 {
+			width: 65px;
+			height: 60px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="header">
+		<h1><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnm9TkosB-s4NSZfzsWjFOCGb8Dpp8N2EBxAtWQKbRwQ&s" id="Logo" class="rounded-circle">Portfolio by Niel AC</h1>
+	</div>
+<br><br>
+	<div class="container mt-4">
+	  <h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6-YvMR-An5QCZJUjKwD_SenilEGB-E2hGyIH83WsMoA&s" id="Logo2" class="rounded-circle"></h2>
+		<form id="fillForm" onsubmit="formVerify()">
+		  <div>
+	    	<label for="inputEmail">Email</label>
+	        <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+	      </div>
+	      </br>
+	      <div>
+	        <label for="inputPassword">Password</label>
+	        <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+	      </div>
+	      </br>
+	      <button type="submit" onclick="mainPage()" class="btn btn-dark">Login</button>
+		</form>
+	</div>
+
+	<script>
+		function mainPage() {
+			window.location.href ="mainpage.html"
+		}
+		function formVerify() {
+			var inputEmail = document.forms ["fillForm"]["inputEmail"].value;
+			var inputPassword = document.forms ["fillForm"]["inputPassword"].value;
+			if (inputEmail == "" || inputPassword == "") {
+               alert("Please fill out the form first.");
+               return false;
+      
+            }
+		}
+	</script>
+
+</body>
+</html>
